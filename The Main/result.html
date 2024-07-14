@@ -1,0 +1,1117 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Dashboard</title>
+    <link rel="stylesheet" href="result.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><h3><b>The Dark Developer's</b></h3></div>
+        </header>
+    <div>
+    <ul class="navbar">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Exams</a></li>
+        <li><a href="#" class="active">Results</a></li>
+        <li><a href="#">Profile</a></li>
+    </ul>
+    </div>
+
+    <main>
+
+        <div class="result-header">
+            <h2>Result Dashboard</h2>
+            <p>View your exam results here</p>
+        </div>
+
+        <div class="student-info">
+            <h3>Student Information</h3>
+            <table>
+                <tr>
+                    <th>Student Name</th>
+                    <td>Saurabh Singh</td>
+                </tr>
+                <tr>
+                    <th>Roll Number</th>
+                    <td>2215001812</td>
+                </tr>
+                <tr>
+                    <th>Course</th>
+                    <td>Bachelor of Technology</td>
+                </tr>
+                <tr>
+                    <th> Branch </th>
+                    <td> CSE</td>
+                </tr>
+                <tr>
+                    <th>Semester</th>
+                    <td>Semester 3</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="result-table">
+            <h3>Result</h3>
+            <table>
+                <tr>
+                    <th>Code</th>
+                    <th>Subject name </th>
+                    <th>Grade</th>
+                    <th>GP</th>
+                    <th>Credit</th>
+                </tr>
+                <tr>
+                    <td>BCSC 1002</td>
+                    <td>OBJECT ORIENTED PROGRAMMING</td>
+                    <td>B+</td>
+                    <td>7</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>BCSC 1003</td>
+                    <td>DATABASE MANAGEMENT SYSTEM</td>
+                    <td>B+</td>
+                    <td>7</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>BCSC 1005</td>
+                    <td>COMPUTER ORGANISATION </td>
+                    <td>C</td>
+                    <td>5</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>BCSC 1010</td>
+                    <td>DISCRETE MATHEMATICS</td>
+                    <td>B+</td>
+                    <td>7</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>BELH 1003</td>
+                    <td>ENGLISH FOR PROFESSIONAL PURPOSES-1</td>
+                    <td>B</td>
+                    <td>6</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>BEGP 0001</td>
+                    <td>GENERAL PROFICIENCY</td>
+                    <td>A+</td>
+                    <td>9</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>BCSC 0801</td>
+                    <td>OBJECT ORIENTED PROGRAMMING LAB</td>
+                    <td>A</td>
+                    <td>8</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>BCSC 0802</td>
+                    <td>DATABASE MANAGEMENT SYSTEM LAB</td>
+                    <td>A+</td>
+                    <td>9</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>BCSC 0804</td>
+                    <td>COMPUTER ORGANISATION  LAB</td>
+                    <td>A</td>
+                    <td>8</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>BTDH 0301</td>
+                    <td>SOFT SKILL-1</td>
+                    <td>A</td>
+                    <td>8</td>
+                    <td>1</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th> STC</th>
+                    <th> SGP</th>
+                    <th> SPI</th>
+                    <th> CC</th>
+                    <th> CGP</th>
+                    <th> CPI</th>
+                </tr>
+                <tr>
+                    <td> 24</td>
+                    <td> 171</td>
+                    <td> 7.13</td>
+                    <td>51</td>
+                    <td>360</td>
+                    <td> 7.06</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="graph">
+            <h3>Performance Graph</h3>
+            <canvas id="myChart" width="400" height="200"></canvas>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 University Exam Portal</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Semester 1', 'Semester 2', 'Semester 3', 'Semester 4'],
+                datasets: [{
+                    label: 'Score',
+                    data: [70,72.1,70.6,68.9],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)'
+
+                    ],
+                    borderWidth:1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Dashboard</title>
+    <link rel="stylesheet" href="result.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><h3><b>The Dark Developer's</b></h3></div>
+        <nav class="navigation">
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Exams</a></li>
+                <li><a href="#" class="active">Results</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <div class="result-header">
+                <h2>Result Dashboard</h2>
+                <p>View your exam results here</p>
+            </div>
+
+            <div class="student-info">
+                <h3>Student Information</h3>
+                <table>
+                    <tr>
+                        <th>Student Name</th>
+                        <td>Saurabh Singh</td>
+                    </tr>
+                    <tr>
+                        <th>Roll Number</th>
+                        <td>2215001812</td>
+                    </tr>
+                    <tr>
+                        <th>Course</th>
+                        <td>Bachelor of Technology</td>
+                    </tr>
+                    <tr>
+                        <th> Branch </th>
+                        <td> CSE</td>
+                    </tr>
+                    <tr>
+                        <th>Semester</th>
+                        <td>Semester 3</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="result-table">
+                <h3>Result</h3>
+                <table>
+                    <tr>
+                        <th>Code</th>
+                        <th>Subject name </th>
+                        <th>Grade</th>
+                        <th>GP</th>
+                        <th>Credit</th>
+                    </tr>
+                    <tr>
+                        <td>BCSC 1002</td>
+                        <td>OBJECT ORIENTED PROGRAMMING</td>
+                        <td>B+</td>
+                        <td>7</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>BCSC 1003</td>
+                        <td>DATABASE MANAGEMENT SYSTEM</td>
+                        <td>B+</td>
+                        <td>7</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>BCSC 1005</td>
+                        <td>COMPUTER ORGANISATION </td>
+                        <td>C</td>
+                        <td>5</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>BCSC 1010</td>
+                        <td>DISCRETE MATHEMATICS</td>
+                        <td>B+</td>
+                        <td>7</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>BELH 1003</td>
+                        <td>ENGLISH FOR PROFESSIONAL PURPOSES-1</td>
+                        <td>B</td>
+                        <td>6</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>BEGP 0001</td>
+                        <td>GENERAL PROFICIENCY</td>
+                        <td>A+</</td>
+                        <td>9</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>BCSC 0801</td>
+                        <td>OBJECT ORIENTED PROGRAMMING LAB</td>
+                        <td>A</td>
+                        <td>8</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>BCSC 0802</td>
+                        <td>DATABASE MANAGEMENT SYSTEM LAB</td>
+                        <td>A+</td>
+                        <td>9</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>BCSC 0804</td>
+                        <td>COMPUTER ORGANISATION LAB</td>
+                        <td>A</td>
+                        <td>8</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>BTDH 0301</td>
+                        <td>SOFT SKILL-1</td>
+                        <td>A</td>
+                        <td>8</td>
+                        <td>1</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th> STC</th>
+                        <th> SGP</th>
+                        <th> SPI</th>
+                        <th> CC</th>
+                        <th> CGP</th>
+                        <th> CPI</th>
+                    </tr>
+                    <tr>
+                        <td> 24</td>
+                        <td> 171</td>
+                        <td> 7.13</td>
+                        <td> 49</td>
+                        <td> 356</td>
+                        <td> 7.27</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="graph">
+                <h3>Graphical Representation</h3>
+                <img src="graph.jpg" alt="Graph" />
+            </div>
+        </main>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Result Dashboard. All rights reserved.</p>
+    </div>
+</body>
+</html> -->
+
+
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Dashboard</title>
+    <link rel="stylesheet" href="result.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><h3><b>The Dark Developer's</b></h3></div>
+        <nav class="navigation">
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Exams</a></li>
+                <li><a href="#" class="active">Results</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <div class="result-header">
+                <h2>Result Dashboard</h2>
+                <p>View your exam results here</p>
+            </div>
+
+            <div class="student-info">
+                <h3>Student Information</h3>
+                <table>
+                    <tr>
+                        <th>Student Name</th>
+                        <td>Saurabh Singh</td>
+                    </tr>
+                    <tr>
+                        <th>Roll Number</th>
+                        <td>2215001812</td>
+                    </tr>
+                    <tr>
+                        <th>Course</th>
+                        <td>Bachelor of Technology</td>
+                    </tr>
+                    <tr>
+                        <th> Branch </th>
+                        <td> CSE</td>
+                    </tr>
+                    <tr>
+                        <th>Semester</th>
+                        <td>Semester 3</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="result-table">
+                <h3>Result</h3>
+                <table>
+                    <tr>
+                        <th>Code</th>
+                        <th>Subject name </th>
+                        <th>Grade</th>
+                        <th>GP</th>
+                        <th>Credit</th>
+                    </tr>
+                    <tr>
+                        <td>BCSC 1002</td>
+                        <td>OBJECT ORIENTED PROGRAMMING</td>
+                        <td>B+</td>
+                        <td>7</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>BCSC 1003</td>
+                        <td>DATABASE MANAGEMENT SYSTEM</td>
+                        <td>B+</td>
+                        <td>7</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>BCSC 1005</td>
+                        <td>COMPUTER ORGANISATION </td>
+                        <td>C</td>
+                        <td>5</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>BCSC 1010</td>
+                        <td>DISCRETE MATHEMATICS</td>
+                        <td>B+</td>
+                        <td>7</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>BELH 1003</td>
+                        <td>ENGLISH FOR PROFESSIONAL PURPOSES-1</td>
+                        <td>B</td>
+                        <td>6</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>BEGP 0001</td>
+                        <td>GENERAL PROFICIENCY</td>
+                        <td>A+</td>
+                        <td>9</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>BCSC 0801</td>
+                        <td>OBJECT ORIENTED PROGRAMMING LAB</td>
+                        <td>A</td>
+                        <td>8</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>BCSC 0802</td>
+                        <td>DATABASE MANAGEMENT SYSTEM LAB</td>
+                        <td>A+</td>
+                        <td>9</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>BCSC 0804</td>
+                        <td>COMPUTER ORGANISATION LAB</td>
+                        <td>A</td>
+                        <td>8</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>BTDH 0301</td>
+                        <td>SOFT SKILL-1</td>
+                        <td>A</td>
+                        <td>8</td>
+                        <td>1</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th> STC</th>
+                        <th> SGP</th>
+                        <th> SPI</th>
+                        <th> CC</th>
+                        <th> CGP</th>
+                        <th> CPI</th>
+                    </tr>
+                    <tr>
+                        <td> 20</td>
+                        <td> 140</td>
+                        <td> 7.00</td>
+                        <td> 49</td>
+                        <td> 356</td>
+                        <td> 7.27</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="graph">
+                <h3>Graphical Representation</h3>
+                <img src="graph.jpg" alt="Graph" />
+            </div>
+        </main>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Result Dashboard. All rights reserved.</p>
+    </div>
+</body>
+</html> -->
+
+
+
+
+
+
+
+ <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Dashboard</title>
+    <link rel="stylesheet" href="result.css">
+</head>
+<body>
+
+
+     <header class="custom-header">
+        <h2 class="logo">The Dark Developer's</h2>
+        <nav class="navigation">
+            <ul class="navbar">
+                <li><a href="SelectionPage.html">Home</a></li>
+                <li><a href="#">Exams</a></li>
+                <li><a href="#" class="active">Results</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>    
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <div class="result-header">
+                <h2>Result Dashboard</h2>
+                <p>View your exam results here</p>
+            </div>
+
+            <div class="student-info">
+                <h3>Student Information</h3>
+                <table>
+                    <tr>
+                        <th>Student Name</th>
+                        <td>Saurabh Singh</td>
+                    </tr>
+                    <tr>
+                        <th>Roll Number</th>
+                        <td>2215001812</td>
+                    </tr>
+                    <tr>
+                        <th>Course</th>
+                        <td>Bachelor of Technology</td>
+                    </tr>
+                    <tr>
+                        <th> Branch </th>
+                        <td> CSE</td>
+                    </tr>
+                    <tr>
+                        <th>Semester</th>
+                        <td>Semester 3</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="result-table">
+                <h3>Result</h3>
+                <table>
+                    <tr>
+                        <th>Code</th>
+                        <th>Subject name </th>
+                        <th>Grade</th>
+                        <th>GP</th>
+                        <th>Credit</th>
+                    </tr>
+                    <tr>
+                        <td>BCSC 1002</td>
+                        <td>OBJECT ORIENTED PROGRAMMING</td>
+                        <td>B+</td>
+                        <td>7</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>BCSC 1003</td>
+                        <td>DATABASE MANAGEMENT SYSTEM</td>
+                        <td>B+</td>
+                        <td>7</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>BCSC 1005</td>
+                        <td>COMPUTER ORGANISATION </td>
+                        <td>C</td>
+                        <td>5</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>BCSC 1010</td>
+                        <td>DISCRETE MATHEMATICS</td>
+                        <td>B+</td>
+                        <td>7</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>BELH 1003</td>
+                        <td>ENGLISH FOR PROFESSIONAL PURPOSES-1</td>
+                        <td>B</td>
+                        <td>6</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>BEGP 0001</td>
+                        <td>GENERAL PROFICIENCY</td>
+                        <td>A+</td>
+                        <td>9</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>BCSC 0801</td>
+                        <td>OBJECT ORIENTED PROGRAMMING LAB</td>
+                        <td>A</td>
+                        <td>8</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>BCSC 0802</td>
+                        <td>DATABASE MANAGEMENT SYSTEM LAB</td>
+                        <td>A+</td>
+                        <td>9</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>BCSC 0804</td>
+                        <td>COMPUTER ORGANISATION LAB</td>
+                        <td>A</td>
+                        <td>8</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>BTDH 0301</td>
+                        <td>SOFT SKILL-1</td>
+                        <td>A</td>
+                        <td>8</td>
+                        <td>1</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th> STC</th>
+                        <th> SGP</th>
+                        <th> SPI</th>
+                        <th> CC</th>
+                        <th> SGP</th>
+                        <th> CPI</th>
+                    </tr>
+                    <tr>
+                        <td> 20</td>
+                        <td> 140</td>
+                        <td> 7.00</td>
+                        <td> 49</td>
+                        <td> 356</td>
+                        <td> 7.27</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="graph">
+                <h3>Graphical Representation</h3>
+                <img src="graph.jpg" alt="Graph" />
+            </div>
+        </main>
+    </div>
+
+   
+    <div class="footer">
+        <p>&copy; 2024 Result Dashboard. All rights reserved.</p>
+    </div>
+</body>
+</html> -->
+
+
+
+<!-- 
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Dashboard</title>
+    <link rel="stylesheet" href="result.css">
+</head>
+<body>
+    <header class="custom-header">
+        <h2 class="logo">The Dark Developer's</h2>
+        <nav class="navigation">
+            <ul class="navbar">
+                <li><a href="SelectionPage.html">Home</a></li>
+                <li><a href="#">Exams</a></li>
+                <li><a href="#" class="active">Results</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>    
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <div class="result-header">
+                <h2>Result Dashboard</h2>
+                <p>View your exam results here</p>
+            </div>
+
+            <div class="student-info">
+                <h3>Student Information</h3>
+                <table>
+                    <tr>
+                        <th>Student Name</th>
+                        <td>Saurabh Singh</td>
+                    </tr>
+                    <tr>
+                        <th>Roll Number</th>
+                        <td>2215001812</td>
+                    </tr>
+                    <tr>
+                        <th>Course</th>
+                        <td>Bachelor of Technology</td>
+                    </tr>
+                    <tr>
+                        <th> Branch </th>
+                        <td> CSE</td>
+                    </tr>
+                    <tr>
+                        <th>Semester</th>
+                        <td>Semester 3</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="result-table">
+                <h3>Result</h3>
+                <table>
+                    <tr>
+                        <th>Code</th>
+                        <th>Subject name </th>
+                        <th>Grade</th>
+                        <th>GP</th>
+                        <th>Credit</th>
+                    </tr>
+                    <tr>
+                        <td>BCSC 1002</td>
+                        <td>OBJECT ORIENTED PROGRAMMING</td>
+                        <td>B+</td>
+                        <td>7</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>BCSC 1003</td>
+                        <td>DATABASE MANAGEMENT SYSTEM</td>
+                        <td>B+</td>
+                        <td>7</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>BCSC 1005</td>
+                        <td>COMPUTER ORGANISATION </td>
+                        <td>C</td>
+                        <td>5</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>BCSC 1010</td>
+                        <td>DISCRETE MATHEMATICS</td>
+                        <td>B+</td>
+                        <td>7</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>BELH 1003</td>
+                        <td>ENGLISH FOR PROFESSIONAL PURPOSES-1</td>
+                        <td>B</td>
+                        <td>6</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>BEGP 0001</td>
+                        <td>GENERAL PROFICIENCY</td>
+                        <td>A+</td>
+                        <td>9</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>BCSC 0801</td>
+                        <td>OBJECT ORIENTED PROGRAMMING LAB</td>
+                        <td>A</td>
+                        <td>8</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>BCSC 0802</td>
+                        <td>DATABASE MANAGEMENT SYSTEM LAB</td>
+                        <td>A+</td>
+                        <td>9</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>BCSC 0804</td>
+                        <td>COMPUTER ORGANISATION LAB</td>
+                        <td>A</td>
+                        <td>8</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>BTDH 0301</td>
+                        <td>SOFT SKILL-1</td>
+                        <td>A</td>
+                        <td>8</td>
+                        <td>1</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th> STC</th>
+                        <th> SGP</th>
+                        <th> SPI</th>
+                        <th> CC</th>
+                        <th> SGP</th>
+                        <th> CPI</th>
+                    </tr>
+                    <tr>
+                        <td> 20</td>
+                        <td> 140</td>
+                        <td> 7.00</td>
+                        <td> 49</td>
+                        <td> 356</td>
+                        <td> 7.27</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="graph">
+                <h3>Graphical Representation</h3>
+                <img src="graph.jpg" alt="Graph" />
+            </div>
+        </main>
+    </div>
+
+    <footer class="custom-footer">
+        <p>&copy; 2024 Result Dashboard. All rights reserved.</p>
+    </footer>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Dashboard</title>
+    <link rel="stylesheet" href="result.css">
+</head>
+<body>
+    <header class="custom-header">
+        <h2 class="logo">The Dark Developer's</h2>
+        <nav class="navigation">
+            <ul class="navbar">
+                <li><a href="SelectionPage.html">Home</a></li>
+                <li><a href="#">Exams</a></li>
+                <li><a href="#" class="active">Results</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>    
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <div class="result-header">
+                <h2>Result Dashboard</h2>
+                <p>View your exam results here</p>
+            </div>
+
+            <div class="student-info">
+                <h3>Student Information</h3>
+                <table>
+                    <tr>
+                        <th>Student Name</th>
+                        <td>Saurabh Singh</td>
+                    </tr>
+                    <tr>
+                        <th>Roll Number</th>
+                        <td>2215001812</td>
+                    </tr>
+                    <tr>
+                        <th>Course</th>
+                        <td>Bachelor of Technology</td>
+                    </tr>
+                    <tr>
+                        <th> Branch </th>
+                        <td> CSE</td>
+                    </tr>
+                    <tr>
+                        <th>Semester</th>
+                        <td>Semester 3</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="result-table">
+                <h3>Result</h3>
+                <table>
+                    <tr>
+                        <th>Code</th>
+                        <th>Subject name </th>
+                        <th>Grade</th>
+                        <th>GP</th>
+                        <th>Credit</th>
+                    </tr>
+                    <tr>
+                        <td>BCSC 1002</td>
+                        <td>OBJECT ORIENTED PROGRAMMING</td>
+                        <td>B+</td>
+                        <td>7</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>BCSC 1003</td>
+                        <td>DATABASE MANAGEMENT SYSTEM</td>
+                        <td>B+</td>
+                        <td>7</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>BCSC 1005</td>
+                        <td>COMPUTER ORGANISATION </td>
+                        <td>C</td>
+                        <td>5</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>BCSC 1010</td>
+                        <td>DISCRETE MATHEMATICS</td>
+                        <td>B+</td>
+                        <td>7</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>BELH 1003</td>
+                        <td>ENGLISH FOR PROFESSIONAL PURPOSES-1</td>
+                        <td>B</td>
+                        <td>6</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>BEGP 0001</td>
+                        <td>GENERAL PROFICIENCY</td>
+                        <td>A+</td>
+                        <td>9</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>BCSC 0801</td>
+                        <td>OBJECT ORIENTED PROGRAMMING LAB</td>
+                        <td>A</td>
+                        <td>8</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>BCSC 0802</td>
+                        <td>DATABASE MANAGEMENT SYSTEM LAB</td>
+                        <td>A+</td>
+                        <td>9</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>BCSC 0804</td>
+                        <td>COMPUTER ORGANISATION LAB</td>
+                        <td>A</td>
+                        <td>8</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>BTDH 0301</td>
+                        <td>SOFT SKILL-1</td>
+                        <td>A</td>
+                        <td>8</td>
+                        <td>1</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th> STC</th>
+                        <th> SGP</th>
+                        <th> SPI</th>
+                        <th> CC</th>
+                        <th> SGP</th>
+                        <th> CPI</th>
+                    </tr>
+                    <tr>
+                        <td> 20</td>
+                        <td> 140</td>
+                        <td> 7.00</td>
+                        <td> 49</td>
+                        <td> 356</td>
+                        <td> 7.27</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="graph">
+                <h3>Graphical Representation</h3>
+                <img src="graph.jpg" alt="Graph" />
+            </div>
+        </main>
+    </div>
+
+    <footer class="custom-footer">
+        <p>&copy; 2024 Result Dashboard. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
